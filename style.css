@@ -42,7 +42,8 @@ body * {
 }
 
 #container {
-  width: 360px; /*Dimensões de width seguindo o figma do projeto */
+  width: 100%;
+  max-width: 588px;
   padding: 0 24px;
   margin: 56px auto 0px;
 }
