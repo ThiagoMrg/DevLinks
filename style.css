@@ -6,7 +6,7 @@
 
 :root {
   --text-color: #ffffff;
-  --bg-mobile: url(assets/bg\ -\ mobile.jpg);
+  --bg-url: url(assets/bg\ -\ mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surfice-color: rgba(255, 255, 255, 0.1);
   --surfice-color-hover: rgba(255, 255, 255, 0.5);
@@ -16,7 +16,7 @@
 
 .light {
   --text-color: #000000;
-  --bg-mobile: url(assets/bg-mobile-light.jpg);
+  --bg-url: url(assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surfice-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -25,15 +25,9 @@
 }
 
 body {
-  /*
-  background: url(./assets/bg\ -\ Mobile.jpg);
-  background-repeat: no-repeat; Por padrão o background vai ficar repetindo, para cobrir toda a tela. 
-  background-position: top center;  Neste caso, utilizamos a propriedade ''top'' para que seja a imagem fique centralizada pelo eixo Y (Mantendo seu formato retangular) e não pelo Eixo X para que. Pois se for centralizada pelo eixo x, ela fica quadrada e perde seu formato 
-  background-size: cover; Existe a propriedade contain, mas precisaria definir a largura e a altura para que ele ''conter'' dentro do espaço definido. 
-  */
-
   /* SHORTHAND background: color image repeat position/size */
-  background: var(--bg-mobile) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -175,4 +169,17 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* Trabalhando a responsividade */
+/* media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }

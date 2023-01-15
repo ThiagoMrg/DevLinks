@@ -7,8 +7,8 @@ Exemplo de ShortHand
 
 background: url(./assets/bg\ -\ Mobile.jpg);
 background-repeat: no-repeat;  
- background-position: top center;  
- background-size: cover;
+background-position: top center;  
+background-size: cover;
 
 Explorando o ShortHand o código ficará assim :
 background: color image repeat position/size... etc.
